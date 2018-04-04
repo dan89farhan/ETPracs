@@ -1,0 +1,11 @@
+def defFun(fname,lname,age,address):
+    print('Your Details are given as below:-')
+    print('First Name: ',fname)
+    print('Last Name: ',lname)
+    print('Age: ',age)
+    print('Address: ',address)
+fname=input('\nEnter First Name: ')
+lname=input('Enter Last Name: ')
+age=input('Enter Age: ')
+address=input('Enter Address: ')
+defFun(fname,lname,age,address)

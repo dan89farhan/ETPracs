@@ -1,0 +1,13 @@
+from tkinter import Tk, Frame, Button
+win = Tk()
+win.title("Buttons")
+win.geometry("300x100")
+app = Frame(win)
+app.grid()
+buttonOne = Button(app, text = "Apply")
+buttonOne.grid()
+buttonTwo = Button(app, text = "Cancel")
+buttonTwo.grid()
+buttonThree = Button(app, text = "Ok")
+buttonThree.grid()
+win.mainloop()

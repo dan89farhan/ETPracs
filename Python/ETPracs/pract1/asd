@@ -1,0 +1,127 @@
+A] BASIC LOOPING STRUCTURE
+1. Addition of numbers using FOR loop
+Code:
+num=[5,7,9,11,48,63,54,82,46,12,4,35]
+sum=0
+for val in num:
+sum=sum+val
+print('Sum of all numbers in an array is : ',sum)
+Output:
+
+2. Type of Integer using NESTED loop
+Code:
+num=6.76
+if num>0:
+print(num, ' - Positive Integer')
+elif num==0:
+print(num, ' - Zero')
+else:
+print(num, ' - Negetive Integer')
+Output:
+
+3. Armstrong of given number using WHILE loop
+Code:
+num=int(input('Enter a number : '))
+order=len(str(num))
+sum=0
+temp=num
+while temp>0:
+digit=temp%10
+sum+=digit**order
+temp//=10
+if num==sum:
+print(num,' is an Armstrong Number')
+else:
+print(num,' is not an Armstrong Number')
+
+
+Output:
+
+B] OPERATORS
+1) Arithmetic Operators
+Code:
+x=10
+y=20
+print('x+y = ',x+y)
+print('x-y = ',x-y)
+print('x*y = ',x*y)
+print('x/y = ',x/y)
+Output:
+
+2) Comparison Operators
+Code:
+x = 10
+y = 12
+print(' x > y : ',x>y)
+print(' x < y : ',x<y)
+print(' x == y : ',x==y)
+print(' x != y : ',x!=y)
+print(' x >= y : ',x>=y)
+print(' x >= y : ',x>=y)
+Output:
+
+3) Logical Operators
+Code:
+x = True
+y = False
+print(' x and y : ',x and y)
+print(' x or y : ',x or y)
+
+print(' not y : ',not y)
+Output:
+
+C] DATA TYPES
+1) Dictionary Datatype
+Code:
+a = {1:"Pranay", 2:"Gavhale", "age":23}
+print('First Name : ', a[1])
+print('Last Name : ', a[2])
+print('Age : ', a["age"])
+Output:
+
+3. Type of Integer using NESTED loop
+Code:
+print(a)
+b=["Hello","John","Reese"]
+print(b)
+c=("Hey","You",1,2,3,"Wassup")
+print(c)
+print(c[1])
+Output:
+
+3) Numeric Datatype
+Code:
+a=100
+print(The type of variable having value", a, " is ", type(a))
+b=10.2345
+print("The type of variable having value", b, " is ", type(b))
+c=100+3j
+print("The type of variable having value", c, " is ", type(c))
+
+Output:
+
+4) Set Datatype
+Code:
+my_set = {1,2,3,4,3,2}
+print(my_set)
+my_set = set([1,2,3,2])
+print(my_set)
+Output:
+
+5) String Datatype
+Code:
+a = "string in a double quote"
+b= 'string in a single quote'
+print(a)
+print(b)
+print(a,"concated with",b)
+print(a+" concated with "+b)
+Output:
+
+6) Tuple Datatype
+Code:
+a=(1,2,3,4)
+print(a)
+b=("hello", 1,2,3,"go")
+print(b)
+print(b[4])
