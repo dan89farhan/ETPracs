@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+
+    <script>
+        function loadDoc() {
+            
+            var name = $("#name").val();
+            var surname = $('#surname').val();
+            var email = $('#email').val();
+            var age = $('#age').val();
+            var location = $('#location').val();
+            
+            var params = 'name='+name+'&surname='+surname+'&email='+email+'&age='+age+'&location='+location;
+            // console.log("Params are "+params);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("POST", "create.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            
+            
+            xhttp.send(params);
+        }
+    </script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Post</a>
+            </li>
+            <li class="nav-item" active>
+                <a class="nav-link" href="get.html">Get</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Black with white text -->
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="surname">SurName:</label>
+                <input type="text" class="form-control" id="surname" placeholder="Enter surname" name="surname">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" placeholder="Enter Location" name="location">
+            </div>
+
+
+
+
+            <button type="button" class="btn btn-secondary" onclick="loadDoc()">Post Data</button>
+
+            <p id="demo"></p>
+        </div>
+    </nav>
+
+
+</body>
+
+</html>
